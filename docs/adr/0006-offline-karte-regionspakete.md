@@ -1,6 +1,6 @@
 # ADR-0006: Offline-Karte und Regionspakete
 
-- Status: Vorgeschlagen
+- Status: Angenommen
 - Datum: 2026-11-24
 
 ## Kontext

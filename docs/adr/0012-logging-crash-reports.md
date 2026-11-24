@@ -1,6 +1,6 @@
 # ADR-0012: Logging und Crash-Reports
 
-- Status: Vorgeschlagen
+- Status: Angenommen
 - Datum: 2026-11-24
 
 ## Kontext

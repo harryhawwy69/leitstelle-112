@@ -1,6 +1,6 @@
 # ADR-0011: UI-Stack und Internationalisierung
 
-- Status: Vorgeschlagen
+- Status: Angenommen
 - Datum: 2026-11-24
 
 ## Kontext

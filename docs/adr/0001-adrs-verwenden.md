@@ -1,6 +1,6 @@
 # ADR-0001: ADRs zur Dokumentation von Entscheidungen
 
-- Status: Vorgeschlagen
+- Status: Angenommen
 - Datum: 2026-11-24
 
 ## Kontext

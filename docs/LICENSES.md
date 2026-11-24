@@ -8,7 +8,9 @@ werden beim Einbau geprüft (exakte Version und Lizenztext) und nach „Verwende
 
 ## Projektlizenz
 
-Offen – Entscheidung des Product Owners ausstehend (siehe `docs/PLAN.md`, Abschnitt 8).
+- Quellcode: GPL-3.0-or-later (`LICENSE`)
+- Eigene Inhalte, Grafiken, Texte, Regionspakete: CC BY-SA 4.0 (`content/LICENSE.md`)
+- Begründung: ADR-0013. Alle Abhängigkeiten müssen GPL-3.0-kompatibel sein.
 
 ## Verwendet
 

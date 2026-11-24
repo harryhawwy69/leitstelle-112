@@ -1,6 +1,6 @@
 # ADR-0009: Datengetriebene Inhalte und Modding
 
-- Status: Vorgeschlagen
+- Status: Angenommen
 - Datum: 2026-11-24
 
 ## Kontext

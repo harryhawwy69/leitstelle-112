@@ -1,6 +1,6 @@
 # ADR-0008: Persistenz – SQLite für Spielstände, YAML für Inhalte
 
-- Status: Vorgeschlagen
+- Status: Angenommen
 - Datum: 2026-11-24
 
 ## Kontext

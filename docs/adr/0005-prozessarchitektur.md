@@ -1,6 +1,6 @@
 # ADR-0005: Prozessarchitektur – Sim-Host und Fenster
 
-- Status: Vorgeschlagen
+- Status: Angenommen
 - Datum: 2026-11-24
 
 ## Kontext

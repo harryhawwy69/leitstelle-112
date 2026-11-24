@@ -1,6 +1,6 @@
 # Leitstelle 112 – Projektplan (Phase 0)
 
-> Status: **Entwurf zur Freigabe** · Stand: 2026-11-24 · Arbeitstitel änderbar
+> Status: **Freigegeben** (2026-11-24) · Arbeitstitel änderbar
 
 ## 1. Vision
 
@@ -23,6 +23,9 @@ Leitgedanken:
    Daten, keine Code-Konstanten. Die Community kann eigene Leitstellenbereiche bauen.
 5. **Eigenständig.** Kein Code, keine Grafiken, Texte, Daten oder Namen aus LstSim.de oder
    anderen Spielen. LstSim.de dient nur als Genre-Referenz.
+6. **Nie durchgespielt.** Kein Ende, keine auswendig lernbaren Einsätze. Vielfalt entsteht aus
+   kombinierbaren Bausteinen, einer verborgenen „wahren Lage", sich entwickelnden Einsätzen
+   und einer lebendigen Welt (Kapitel 3a, ADR-0014).
 
 Nicht-Ziele (bewusst):
 
@@ -147,6 +150,23 @@ Inhalt:
 Abnahmekriterium: Ein neuer Spieler schafft mit dem Tutorial einen kompletten Einsatz
 und danach 30 Minuten freies Spiel ohne Absturz; alle automatischen Tests grün;
 Installer läuft auf einem frischen Windows 11.
+
+## 3a. Wiederspielbarkeit – warum das Spiel nie gleich ist
+
+Details und Begründung: ADR-0014. Kurzfassung der Mechaniken und wann sie kommen:
+
+| Mechanik | Beispiel | ab |
+|---|---|---|
+| Einsätze aus Bausteinen (Meldebild × Patient × Ort × Umstände × Anrufer × Komplikation) | „Sturz" wird zu: 84-Jährige, 3. OG ohne Aufzug, Hund in der Wohnung, Nachbarin ruft an, nachts, Glätte | M3 (einfach), M5 (voll) |
+| Wahre Lage ≠ gemeldete Lage | „Bewusstlose Person" → vor Ort Reanimation; „Kleinbrand" → Wohnungsbrand mit Menschenleben in Gefahr | M3 (Datenmodell), M5/M6 (voll) |
+| Lageentwicklung und Folgeeinsätze | Patient verschlechtert sich während der Anfahrt; Unfall → Stau → Auffahrunfall | M6 |
+| Ortsabhängiges Aufkommen | Seniorenheim nachts, Freibad im Sommer, Disco am Samstag, Autobahn im Berufsverkehr | M3 (einfach), M8 |
+| Ereigniskalender und Weltlage | Glätte, Hitzewelle, Unwetter, Grippewelle, Volksfest, Silvester, Baustellen/Sperrungen, Klinik-Abmeldungen | M7/M8 |
+| Seltene Großereignisse | Busunfall, Zugunglück, Gefahrgut, Großbrand, Evakuierung | M10 |
+| Wiederkehrende Personen und Adressen | Vielanrufer, Stammpatienten, bekannte Problemadressen | M11 |
+| Einsatz-Regie (Director) | Wechsel von Ruhephasen und Spitzen innerhalb realistischer Grenzen | M8 |
+| Langzeitspiel | Endlosbetrieb mit Kalender, Laufbahn, größere Bereiche, Bedarfsplanung, Tages-Seed-Herausforderung | M11 |
+| Community-Inhalte | eigene Regionen, Bausteine, Szenarien | M12 |
 
 ## 4. Architektur
 
@@ -334,14 +354,15 @@ Zusammenfassung an den Product Owner.
 | M2 | Welt & Routing | Region-Builder für „Brakenfeld", Routinggraph, Fahrzeitmodell, Offline-Karte mit Straßen/Orten/Wachen/Krankenhäusern, Adresssuche | L |
 | M3 | Vertical Slice – Ablauf | Notruf mit Abfrage, Einsatz, AAO-Vorschlag, Alarmierung, FMS-Zyklus, Anfahrt auf der Karte, Transport, Übergabe, Rückfahrt; Einsatzliste, Fahrzeugliste, Funklog | L |
 | M4 | Vertical Slice – fertig (v0.1.0) | Speichern/Laden/Autosave, Schichtauswertung, Tutorial, Tastatursteuerung, Performance-Test mit 300 Fz/100 Einsätzen (synthetisch), E2E-Tests, Installer manuell geprüft | M |
-| M5 | Notrufannahme 2.0 | Dialoggenerator, mehrere Leitungen, Warteschlange, Fehl-/Missbrauchs-/Doppelanrufe, 110- und Nachbarübergaben | M |
+| M5 | Notrufannahme & Einsatzgenerator 2.0 | Dialoggenerator, Bausteinsystem für Einsätze, wahre vs. gemeldete Lage, mehrere Leitungen, Warteschlange, Fehl-/Missbrauchs-/Doppelanrufe, 110- und Nachbarübergaben | L |
 | M6 | Feuerwehr & AAO | Fahrzeugtypen Feuerwehr, Brand-/TH-Stichworte, Nachalarmierung, Lagemeldungen, NEF-Rendezvous, KTW/ITW/NAW | L |
 | M7 | RD-Logistik | Bettenkapazität und Abmeldungen, Krankentransport-Termine, Verlegungen, Desinfektion, Defekte, Tanken, Pausen, Schichtwechsel | M |
-| M8 | Welt-Dynamik | feine Tages-/Wochenmuster, Wetter, Feiertage, Silvester, RTH/ITH | M |
+| M8 | Welt-Dynamik | feine Tages-/Wochenmuster, Wetter, Feiertage, Silvester, Ereigniskalender, Straßensperrungen, Einsatz-Regie, RTH/ITH | M |
 | M9 | Mehrfenster & Mehrmonitor | frei anordenbare Fenster, Layout-Profile, vollständige Shortcuts | M |
-| M10 | MANV & Großlagen | Sichtung, Bereitstellungsraum, ELW-Führung, Patientenverteilung, SEG | L |
-| M11 | Editoren & Modding (v1.0.0) | Regionen- und Szenario-Editor, Mod-Ordner, Schema-Doku, Trainingsmodus, Schwierigkeitsgrade, Hilfsfrist-Presets aller Länder mit Quellen | L |
-| M12+ | Echte Regionen | OSM-Pipeline, Import öffentlicher Wachen-/Krankenhausdaten mit Lizenzprüfung | – |
+| M10 | MANV & Großlagen | Sichtung, Bereitstellungsraum, ELW-Führung, Patientenverteilung, SEG, seltene Großereignisse | L |
+| M11 | Langzeitspiel | Endlosbetrieb mit Kalender, Laufbahn, Bereichsübernahme, Bedarfsplanung, wiederkehrende Personen, Tages-Seed-Herausforderung | M |
+| M12 | Editoren & Modding (v1.0.0) | Regionen- und Szenario-Editor, Mod-Ordner, Schema-Doku, Trainingsmodus, Schwierigkeitsgrade, Hilfsfrist-Presets aller Länder mit Quellen | L |
+| M13+ | Echte Regionen | OSM-Pipeline, Import öffentlicher Wachen-/Krankenhausdaten mit Lizenzprüfung | – |
 
 Reihenfolge nach M4 ist verhandelbar; M9 kann vorgezogen werden, falls Mehrmonitor früh
 wichtig ist.
@@ -355,17 +376,28 @@ wichtig ist.
 | Determinismus bricht unbemerkt | Replays/Tests unbrauchbar | Lint-Verbote, Golden-Replay-Tests in CI |
 | Performance der Karte bei vielen Objekten | Ruckeln | GeoJSON-Updates gedrosselt, Interpolation im Renderer, Benchmark ab M4 |
 | Native Module (better-sqlite3) und Electron-Versionen | Build-Probleme | Prebuilds, Rebuild in CI, Fallback `node:sqlite` prüfen |
-| Projekt liegt in OneDrive | Sync-Konflikte, gesperrte Dateien bei `node_modules` | Repo außerhalb von OneDrive anlegen (offene Frage 2) |
+| Firmenrechner blockiert Programme in AppData | Werkzeuge starten nicht | Werkzeuge und Caches unter `C:\dev`, CI als maßgebliche Build-Umgebung (Kapitel 9) |
+| Vielfalt wirkt nach einiger Zeit doch repetitiv | Spieler verlieren Interesse | Bausteinsystem, wahre vs. gemeldete Lage, Long-Tail-Ereignisse, Statistik über Wiederholungen (ADR-0014) |
 | Unsigned Installer | SmartScreen-Warnung | dokumentieren; Code-Signing-Zertifikat vor öffentlicher Verteilung |
 
-## 8. Offene Fragen an den Product Owner
+## 8. Entscheidungen des Product Owners (2026-11-24)
 
-1. **Desktop-Shell:** Einverstanden mit Electron statt Tauri 2 (ADR-0002)?
-2. **Speicherort:** Das Repo liegt aktuell unter OneDrive. Vorschlag: nach `C:\dev\leitstelle-112`
-   verschieben, bevor `node_modules` entsteht.
-3. **GitHub:** Gibt es ein (privates) Repository für CI? Die GitHub CLI ist nicht installiert.
-4. **Lizenz des Projekts:** proprietär/closed source oder Open Source (z. B. GPL-3.0/MIT)?
-   Beeinflusst, welche Abhängigkeiten und Assets wir nutzen dürfen.
-5. **Name des fiktiven Landkreises:** „Brakenfeld" ok?
-6. **Entwicklungsumgebung:** Node.js (aktuelle LTS-Version) und pnpm fehlen auf diesem Rechner. Darf ich sie
-   installieren (z. B. per `winget`), oder installierst du sie selbst?
+1. **Plan freigegeben**, Electron als Desktop-Shell (ADR-0002 angenommen).
+2. **Speicherort:** Repo liegt unter `C:\dev\leitstelle-112` (außerhalb von OneDrive).
+3. **GitHub:** öffentliches Repository, Pflege über Issues, Meilensteine und Pull Requests.
+4. **Lizenz:** an das Team delegiert → GPL-3.0-or-later für Code, CC BY-SA 4.0 für Inhalte
+   (ADR-0013).
+5. **Landkreis:** „Brakenfeld" bestätigt.
+6. **Werkzeuge:** Node.js LTS, pnpm 10 und GitHub CLI installiert.
+7. **Neu:** Das Spiel soll realistisch und nicht durchspielbar sein, mit ständig neuen
+   Situationen (Kapitel 3a, ADR-0014).
+
+## 9. Hinweise zur Entwicklungsumgebung
+
+Der Entwicklungsrechner ist ein verwalteter Firmenrechner: Programme aus `%APPDATA%` bzw.
+`%LOCALAPPDATA%` dürfen nicht starten (pnpm 11 als native `.exe` wurde blockiert). Deshalb:
+
+- pnpm 10 (JavaScript-basiert) unter `C:\dev\tools\pnpm`.
+- Werkzeug-Caches, die ausführbare Dateien enthalten (z. B. electron-builder/NSIS), werden
+  per Umgebungsvariable nach `C:\dev\.cache` umgeleitet.
+- Die CI auf GitHub Actions ist davon unabhängig und die maßgebliche Build-Umgebung.

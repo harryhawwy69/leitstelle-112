@@ -1,6 +1,6 @@
 # ADR-0007: Eigenes Routing und Fahrzeitmodell
 
-- Status: Vorgeschlagen
+- Status: Angenommen
 - Datum: 2026-11-24
 
 ## Kontext
