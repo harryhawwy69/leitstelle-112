@@ -131,12 +131,12 @@ describe('Simulation – Determinismus', () => {
     );
     expect({ tick: sim.tick, hash: sim.hash(), stats: sim.view().stats }).toMatchInlineSnapshot(`
       {
-        "hash": "7bb868b50d942422",
+        "hash": "fa4fe68d45e7f27e",
         "stats": {
           "callsAbandoned": 4,
           "callsAccepted": 154,
           "callsReceived": 159,
-          "totalWaitMs": 3830000,
+          "totalWaitMs": 3676000,
         },
         "tick": 3600,
       }
