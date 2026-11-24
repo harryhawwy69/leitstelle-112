@@ -1,0 +1,33 @@
+name: 🩺 Fachliches Feedback
+description: Etwas ist fachlich unrealistisch (Abläufe, Zeiten, Fahrzeuge, Medizin, Taktik).
+labels: ["typ: realismus", "status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Realismus ist unser Kern. Danke, dass du dein Fachwissen teilst!
+        **Bitte keine echten Patienten- oder Einsatzdaten angeben.**
+  - type: textarea
+    id: was
+    attributes:
+      label: Was ist im Spiel unrealistisch?
+      placeholder: Die Übergabezeit im Krankenhaus beträgt im Spiel 2 Minuten.
+    validations:
+      required: true
+  - type: textarea
+    id: real
+    attributes:
+      label: Wie ist es in der Realität?
+      placeholder: Üblich sind eher 15–30 Minuten inkl. Übergabe, Dokumentation und Herrichten.
+    validations:
+      required: true
+  - type: input
+    id: quelle
+    attributes:
+      label: Quelle oder Erfahrung
+      placeholder: Landesrettungsdienstgesetz …, eigene Tätigkeit als NotSan seit …
+  - type: dropdown
+    id: region
+    attributes:
+      label: Gilt das bundesweit?
+      options: ["bundesweit", "nur in bestimmten Bundesländern", "nur regional / je Leitstelle", "weiß nicht"]

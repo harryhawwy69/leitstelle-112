@@ -1,0 +1,51 @@
+name: 🐞 Fehlerbericht
+description: Etwas funktioniert nicht wie erwartet.
+labels: ["typ: bug", "status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für deine Meldung! Je genauer, desto schneller können wir helfen.
+        Tipp: *Hilfe → Diagnosepaket erstellen* enthält Seed und Eingaben – damit können wir den Fehler exakt nachstellen.
+  - type: textarea
+    id: beschreibung
+    attributes:
+      label: Was ist passiert?
+      placeholder: Der RTW bleibt nach Status 8 stehen und meldet sich nicht frei.
+    validations:
+      required: true
+  - type: textarea
+    id: schritte
+    attributes:
+      label: Schritte zum Nachstellen
+      placeholder: |
+        1. Neues Spiel, Region Brakenfeld
+        2. Einsatz „Sturz" annehmen
+        3. RTW 1 alarmieren …
+    validations:
+      required: true
+  - type: textarea
+    id: erwartet
+    attributes:
+      label: Was hast du erwartet?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Betriebssystem
+      options: ["Windows 11", "Windows 10", "Andere"]
+    validations:
+      required: true
+  - type: textarea
+    id: anhang
+    attributes:
+      label: Diagnosepaket, Screenshots, Log-Auszug
+      description: Dateien per Drag & Drop hier ablegen.

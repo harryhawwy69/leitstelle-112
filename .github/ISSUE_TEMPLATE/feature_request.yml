@@ -1,0 +1,29 @@
+name: 💡 Feature-Wunsch
+description: Eine Idee für eine neue Funktion oder Verbesserung.
+labels: ["typ: feature", "status: triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Welches Problem löst die Idee?
+      placeholder: Beim Großbrand verliere ich den Überblick, welche Fahrzeuge schon im Bereitstellungsraum sind.
+    validations:
+      required: true
+  - type: textarea
+    id: vorschlag
+    attributes:
+      label: Vorschlag
+    validations:
+      required: true
+  - type: textarea
+    id: realitaet
+    attributes:
+      label: Wie läuft das in der Realität?
+      description: Falls bekannt – wie wird das in echten Leitstellen gehandhabt?
+  - type: dropdown
+    id: bereich
+    attributes:
+      label: Bereich
+      options: ["Notrufannahme", "Disposition", "Rettungsdienst", "Feuerwehr", "Katastrophenschutz", "Karte/Routing", "Oberfläche", "Inhalte/Modding", "Sonstiges"]
+    validations:
+      required: true
