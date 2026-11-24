@@ -44,7 +44,7 @@ describe('Performance', () => {
       t < 3600 && sim.raw.incidents.filter((i) => i.status !== 'closed').length < 100;
       t++
     ) {
-      if (t % 3 === 0) botAct(sim, { cheat: true });
+      if (t % 10 === 0) botAct(sim, { cheat: true });
       sim.step();
     }
     const active = sim.raw.incidents.filter((i) => i.status !== 'closed').length;

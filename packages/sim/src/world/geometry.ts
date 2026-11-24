@@ -66,34 +66,3 @@ export function crossesPolyline(a: Vec, b: Vec, line: readonly Vec[]): boolean {
   }
   return false;
 }
-
-export function pointInPolygon(p: Vec, poly: readonly Vec[]): boolean {
-  let inside = false;
-  for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
-    const a = poly[i] as Vec;
-    const b = poly[j] as Vec;
-    if (
-      a[1] > p[1] !== b[1] > p[1] &&
-      p[0] < ((b[0] - a[0]) * (p[1] - a[1])) / (b[1] - a[1]) + a[0]
-    ) {
-      inside = !inside;
-    }
-  }
-  return inside;
-}
-
-/** Kleinster Abstand eines Punkts zu einem Polygonzug. */
-export function distanceToPolyline(p: Vec, line: readonly Vec[]): number {
-  let best = Number.POSITIVE_INFINITY;
-  for (let i = 0; i + 1 < line.length; i++) {
-    const a = line[i] as Vec;
-    const b = line[i + 1] as Vec;
-    const abx = b[0] - a[0];
-    const aby = b[1] - a[1];
-    const len2 = abx * abx + aby * aby;
-    const t =
-      len2 === 0 ? 0 : Math.max(0, Math.min(1, ((p[0] - a[0]) * abx + (p[1] - a[1]) * aby) / len2));
-    best = Math.min(best, dist(p, [a[0] + t * abx, a[1] + t * aby]));
-  }
-  return best;
-}

@@ -4,7 +4,7 @@ import { Simulation, defaultConfig, replay } from './simulation';
 import { MS_PER_HOUR, TICK_MS } from './time';
 import { baseContent, botAct, newSim } from './test-support';
 import type { FmsStatus, SimEvent, SimSnapshot, VehicleTask } from './types';
-import { buildView } from './view';
+import { buildView, buildWorldInfo } from './view';
 
 /** Spielt `ticks` Sekunden mit einem Bot, der nur in jedem `every`-ten Tick handelt. */
 function playBot(sim: Simulation, ticks: number, every = 5, cheat = true): SimEvent[] {
@@ -354,5 +354,21 @@ describe('Konfiguration', () => {
     const sim = newSim();
     expect(sim.raw.vehicles).toHaveLength(7);
     expect(sim.raw.vehicles.every((v) => v.status === 2)).toBe(true);
+  });
+});
+
+describe('Statische Weltdaten', () => {
+  it('buildWorldInfo liefert alles, was die Oberfläche zum Nachschlagen braucht', () => {
+    const sim = newSim();
+    const info = buildWorldInfo(sim);
+    expect(info.centerName).toBe('ILS Brakenfeld');
+    expect(info.addresses).toHaveLength(sim.world.addresses.length);
+    expect(info.addresses.some((a) => a.kind === 'road' && a.toTownId !== undefined)).toBe(true);
+    expect(info.streets.length).toBe(sim.world.streets.length);
+    expect(info.map.roads.features.length).toBe(sim.world.segments.length);
+    expect(info.keywords.map((k) => k.code)).toEqual(['RD 1', 'RD 2', 'RD 3', 'RD 0']);
+    expect(info.diagnoses.every((d) => d.name.length > 0)).toBe(true);
+    // Keine verborgene Wahrheit in den statischen Daten.
+    expect(JSON.stringify(info)).not.toContain('needsDoctor');
   });
 });

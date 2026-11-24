@@ -9,7 +9,7 @@ import tseslint from 'typescript-eslint';
 /** Verbote im deterministischen Simulationskern (ADR-0004, CLAUDE.md Regel 3). */
 const deterministicCore = {
   files: ['packages/sim/src/**/*.ts', 'packages/routing/src/**/*.ts'],
-  ignores: ['**/*.test.ts', '**/*.bench.ts', '**/test-support.ts'],
+  ignores: ['**/*.test.ts', '**/*.perf.ts', '**/test-support.ts'],
   rules: {
     'no-restricted-globals': [
       'error',
@@ -128,7 +128,7 @@ export default defineConfig(
     rules: reactHooks.configs.recommended.rules,
   },
   {
-    files: ['**/*.test.ts', '**/*.test.tsx', 'e2e/**/*.ts'],
+    files: ['**/*.test.ts', '**/*.test.tsx', '**/*.perf.ts', 'e2e/**/*.ts'],
     rules: {
       '@typescript-eslint/no-non-null-assertion': 'off',
     },
