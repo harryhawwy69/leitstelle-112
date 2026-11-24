@@ -41,89 +41,89 @@ Legende: **MVP** = Vertical Slice (v0.1), **1.0** = erste vollständige Version,
 
 ### 2.1 Notrufannahme
 
-| Feature | MVP | 1.0 | Später |
-|---|:-:|:-:|:-:|
-| Eingehender Notruf mit generiertem Dialog (Textbausteine) | ● | | |
-| Strukturierte Abfrage: Wo, Was, Wie viele, Welche Verletzungen, Rückrufnummer | ● | | |
-| Adresssuche mit Straßen/Hausnummern der Region (Geocoding offline) | ● | | |
-| Unklare/panische Anrufer, unvollständige Angaben, Nachfragen nötig | | ● | |
-| Fehlalarme, Missbrauchsanrufe, Doppelmeldungen zum selben Ereignis | | ● | |
-| Mehrere Leitungen, Warteschlange, Wartezeit-Bewertung | | ● | |
-| Übergaben von 110 (Polizei) und Nachbarleitstellen | | ● | |
-| Abfrageprotokolle je Meldebild (standardisierte Notrufabfrage, eigenes Schema) | | ● | |
-| Sprachausgabe der Anrufer (Windows-TTS, offline) | | | ● |
+| Feature                                                                        | MVP | 1.0 | Später |
+| ------------------------------------------------------------------------------ | :-: | :-: | :----: |
+| Eingehender Notruf mit generiertem Dialog (Textbausteine)                      |  ●  |     |        |
+| Strukturierte Abfrage: Wo, Was, Wie viele, Welche Verletzungen, Rückrufnummer  |  ●  |     |        |
+| Adresssuche mit Straßen/Hausnummern der Region (Geocoding offline)             |  ●  |     |        |
+| Unklare/panische Anrufer, unvollständige Angaben, Nachfragen nötig             |     |  ●  |        |
+| Fehlalarme, Missbrauchsanrufe, Doppelmeldungen zum selben Ereignis             |     |  ●  |        |
+| Mehrere Leitungen, Warteschlange, Wartezeit-Bewertung                          |     |  ●  |        |
+| Übergaben von 110 (Polizei) und Nachbarleitstellen                             |     |  ●  |        |
+| Abfrageprotokolle je Meldebild (standardisierte Notrufabfrage, eigenes Schema) |     |  ●  |        |
+| Sprachausgabe der Anrufer (Windows-TTS, offline)                               |     |     |   ●    |
 
 ### 2.2 Disposition
 
-| Feature | MVP | 1.0 | Später |
-|---|:-:|:-:|:-:|
-| Einsatzstichworte mit AAO-Vorschlag, Spieler kann überstimmen | ● | | |
-| Vorschlag nächstes geeignetes Fahrzeug nach **Fahrzeit** (nicht Luftlinie) | ● | | |
-| RTW, NEF | ● | | |
-| KTW, ITW, NAW | | ● | |
-| RTH/ITH (Tagbetrieb, wetterabhängig, Landeplatz/Zwischenlandung) | | ● | |
-| Feuerwehr: HLF, LF, TLF, DLK, RW, ELW 1/2, GW-Typen | | ● | |
-| SEG / Schnell-Einsatz-Gruppen, Alarmierung über Meldeempfänger mit Ausrückzeit | | ● | |
-| Polizei als externe Lage (Anforderung, Eintreffen gemeldet) | | ● | |
-| FMS-Status 0–9 inkl. Sprechwunsch (5) und priorisiertem Sprechwunsch (0) | ● (1,2,3,4,6,7,8) | ● (vollständig) | |
-| Funkverkehr als Textlog | ● | | |
-| Nachalarmierung, Rückmeldungen von der Einsatzstelle ("Lage") | | ● | |
-| Rendezvous-System Notarzt (NEF + RTW, NA-Begleitung, Nachforderung) | | ● | |
-| Nachbarschaftshilfe über Bereichsgrenzen | | ● | |
-| Gebietsabsicherung / Umsetzen von Fahrzeugen (Bedarfsplanung) | | ● | |
+| Feature                                                                        |        MVP        |       1.0       | Später |
+| ------------------------------------------------------------------------------ | :---------------: | :-------------: | :----: |
+| Einsatzstichworte mit AAO-Vorschlag, Spieler kann überstimmen                  |         ●         |                 |        |
+| Vorschlag nächstes geeignetes Fahrzeug nach **Fahrzeit** (nicht Luftlinie)     |         ●         |                 |        |
+| RTW, NEF                                                                       |         ●         |                 |        |
+| KTW, ITW, NAW                                                                  |                   |        ●        |        |
+| RTH/ITH (Tagbetrieb, wetterabhängig, Landeplatz/Zwischenlandung)               |                   |        ●        |        |
+| Feuerwehr: HLF, LF, TLF, DLK, RW, ELW 1/2, GW-Typen                            |                   |        ●        |        |
+| SEG / Schnell-Einsatz-Gruppen, Alarmierung über Meldeempfänger mit Ausrückzeit |                   |        ●        |        |
+| Polizei als externe Lage (Anforderung, Eintreffen gemeldet)                    |                   |        ●        |        |
+| FMS-Status 0–9 inkl. Sprechwunsch (5) und priorisiertem Sprechwunsch (0)       | ● (1,2,3,4,6,7,8) | ● (vollständig) |        |
+| Funkverkehr als Textlog                                                        |         ●         |                 |        |
+| Nachalarmierung, Rückmeldungen von der Einsatzstelle ("Lage")                  |                   |        ●        |        |
+| Rendezvous-System Notarzt (NEF + RTW, NA-Begleitung, Nachforderung)            |                   |        ●        |        |
+| Nachbarschaftshilfe über Bereichsgrenzen                                       |                   |        ●        |        |
+| Gebietsabsicherung / Umsetzen von Fahrzeugen (Bedarfsplanung)                  |                   |        ●        |        |
 
 ### 2.3 Rettungsdienst-Logistik
 
-| Feature | MVP | 1.0 | Später |
-|---|:-:|:-:|:-:|
-| Krankenhäuser mit Fachabteilungen und Versorgungsstufen | ● (2 Häuser) | | |
-| Zielklinikvorschlag nach Diagnose und Entfernung | ● | | |
-| Bettenkapazität, Abmeldungen, Behandlungskapazitäten-Nachweis | | ● | |
-| Übergabezeit, Rückfahrt zur Wache | ● | | |
-| Desinfektion nach Infektionstransport | | ● | |
-| Fahrzeugdefekte, Tankstopps, Pausen, Schichtwechsel | | ● | |
-| Krankentransporte inkl. geplanter Termine, Verlegungen, Intensivtransporte | | ● | |
+| Feature                                                                    |     MVP      | 1.0 | Später |
+| -------------------------------------------------------------------------- | :----------: | :-: | :----: |
+| Krankenhäuser mit Fachabteilungen und Versorgungsstufen                    | ● (2 Häuser) |     |        |
+| Zielklinikvorschlag nach Diagnose und Entfernung                           |      ●       |     |        |
+| Bettenkapazität, Abmeldungen, Behandlungskapazitäten-Nachweis              |              |  ●  |        |
+| Übergabezeit, Rückfahrt zur Wache                                          |      ●       |     |        |
+| Desinfektion nach Infektionstransport                                      |              |  ●  |        |
+| Fahrzeugdefekte, Tankstopps, Pausen, Schichtwechsel                        |              |  ●  |        |
+| Krankentransporte inkl. geplanter Termine, Verlegungen, Intensivtransporte |              |  ●  |        |
 
 ### 2.4 Welt & Dynamik
 
-| Feature | MVP | 1.0 | Später |
-|---|:-:|:-:|:-:|
-| Tageszeit- und Wochentagsmuster im Einsatzaufkommen | ● (einfach) | ● (fein) | |
-| Verkehrsfaktoren (Berufsverkehr, Nacht, Wochenende) auf Fahrzeiten | ● | | |
-| Wetter (Regen, Schnee, Glätte, Hitze, Nebel) auf Fahrzeit und Aufkommen | | ● | |
-| Feiertage, Silvester, Großveranstaltungen | | ● | |
-| Großschadenslagen / MANV: Sichtung, Bereitstellungsraum, ELW-Führung, Patientenverteilung | | ● | |
-| Hilfsfristen je Bundesland, konfigurierbar | ● (1 Preset) | ● (Presets mit Quellen) | |
-| Echte Regionen aus OSM und öffentlichen Verzeichnissen | | | ● |
+| Feature                                                                                   |     MVP      |           1.0           | Später |
+| ----------------------------------------------------------------------------------------- | :----------: | :---------------------: | :----: |
+| Tageszeit- und Wochentagsmuster im Einsatzaufkommen                                       | ● (einfach)  |        ● (fein)         |        |
+| Verkehrsfaktoren (Berufsverkehr, Nacht, Wochenende) auf Fahrzeiten                        |      ●       |                         |        |
+| Wetter (Regen, Schnee, Glätte, Hitze, Nebel) auf Fahrzeit und Aufkommen                   |              |            ●            |        |
+| Feiertage, Silvester, Großveranstaltungen                                                 |              |            ●            |        |
+| Großschadenslagen / MANV: Sichtung, Bereitstellungsraum, ELW-Führung, Patientenverteilung |              |            ●            |        |
+| Hilfsfristen je Bundesland, konfigurierbar                                                | ● (1 Preset) | ● (Presets mit Quellen) |        |
+| Echte Regionen aus OSM und öffentlichen Verzeichnissen                                    |              |                         |   ●    |
 
 ### 2.5 Bewertung & Fortschritt
 
-| Feature | MVP | 1.0 | Später |
-|---|:-:|:-:|:-:|
-| Schichtauswertung: Hilfsfrist, Dispositionsqualität, Fehler, Outcome, Auslastung | ● (Basis) | ● | |
-| Tutorial | ● (geführter erster Einsatz) | ● (vollständig) | |
-| Trainingsmodus, Schwierigkeitsgrade | | ● | |
-| Freies Spiel | ● | | |
-| Szenario-Editor | | ● | |
-| Regionen-Editor (Wachen, Fahrzeuge, Krankenhäuser auf der Karte) | | ● | |
-| Replays (Seed + Eingabeprotokoll) | | ● | |
-| Steam-Workshop o. Ä. Mod-Verteilung | | | ● |
+| Feature                                                                          |             MVP              |       1.0       | Später |
+| -------------------------------------------------------------------------------- | :--------------------------: | :-------------: | :----: |
+| Schichtauswertung: Hilfsfrist, Dispositionsqualität, Fehler, Outcome, Auslastung |          ● (Basis)           |        ●        |        |
+| Tutorial                                                                         | ● (geführter erster Einsatz) | ● (vollständig) |        |
+| Trainingsmodus, Schwierigkeitsgrade                                              |                              |        ●        |        |
+| Freies Spiel                                                                     |              ●               |                 |        |
+| Szenario-Editor                                                                  |                              |        ●        |        |
+| Regionen-Editor (Wachen, Fahrzeuge, Krankenhäuser auf der Karte)                 |                              |        ●        |        |
+| Replays (Seed + Eingabeprotokoll)                                                |                              |        ●        |        |
+| Steam-Workshop o. Ä. Mod-Verteilung                                              |                              |                 |   ●    |
 
 ### 2.6 UI/UX & Technik
 
-| Feature | MVP | 1.0 | Später |
-|---|:-:|:-:|:-:|
-| Dunkles Einsatzleitrechner-Theme, klare Statusfarben | ● | | |
-| Karte (MapLibre, offline), Einsatzliste, Fahrzeugstatus, Notrufmaske, Funklog | ● (ein Fenster, Panels) | | |
-| Mehrfenster / Mehrmonitor mit gespeichertem Layout | | ● | |
-| Vollständige Tastatursteuerung, konfigurierbare Shortcuts | ● (Kernabläufe) | ● (alles) | |
-| Barrierearmut: Kontraste (WCAG AA), skalierbare Schrift, farbunabhängige Statusanzeige | ● | | |
-| Pause, Zeitraffer 1x/2x/5x/10x | ● | | |
-| Autosave, mehrere Speicherstände | ● | | |
-| Strukturiertes Logging, lokale Crash-Reports | ● | | |
-| Windows-Installer (NSIS) | ● | | |
-| Deutsche UI, i18n-fähig (Englisch als zweite Sprache) | ● (DE) | | ● (EN) |
-| Mod-Ordner mit Schema-Validierung und Fehlermeldungen | | ● | |
+| Feature                                                                                |           MVP           |    1.0    | Später |
+| -------------------------------------------------------------------------------------- | :---------------------: | :-------: | :----: |
+| Dunkles Einsatzleitrechner-Theme, klare Statusfarben                                   |            ●            |           |        |
+| Karte (MapLibre, offline), Einsatzliste, Fahrzeugstatus, Notrufmaske, Funklog          | ● (ein Fenster, Panels) |           |        |
+| Mehrfenster / Mehrmonitor mit gespeichertem Layout                                     |                         |     ●     |        |
+| Vollständige Tastatursteuerung, konfigurierbare Shortcuts                              |     ● (Kernabläufe)     | ● (alles) |        |
+| Barrierearmut: Kontraste (WCAG AA), skalierbare Schrift, farbunabhängige Statusanzeige |            ●            |           |        |
+| Pause, Zeitraffer 1x/2x/5x/10x                                                         |            ●            |           |        |
+| Autosave, mehrere Speicherstände                                                       |            ●            |           |        |
+| Strukturiertes Logging, lokale Crash-Reports                                           |            ●            |           |        |
+| Windows-Installer (NSIS)                                                               |            ●            |           |        |
+| Deutsche UI, i18n-fähig (Englisch als zweite Sprache)                                  |         ● (DE)          |           | ● (EN) |
+| Mod-Ordner mit Schema-Validierung und Fehlermeldungen                                  |                         |     ●     |        |
 
 ## 3. Vertical Slice (MVP, v0.1)
 
@@ -155,18 +155,18 @@ Installer läuft auf einem frischen Windows 11.
 
 Details und Begründung: ADR-0014. Kurzfassung der Mechaniken und wann sie kommen:
 
-| Mechanik | Beispiel | ab |
-|---|---|---|
-| Einsätze aus Bausteinen (Meldebild × Patient × Ort × Umstände × Anrufer × Komplikation) | „Sturz" wird zu: 84-Jährige, 3. OG ohne Aufzug, Hund in der Wohnung, Nachbarin ruft an, nachts, Glätte | M3 (einfach), M5 (voll) |
-| Wahre Lage ≠ gemeldete Lage | „Bewusstlose Person" → vor Ort Reanimation; „Kleinbrand" → Wohnungsbrand mit Menschenleben in Gefahr | M3 (Datenmodell), M5/M6 (voll) |
-| Lageentwicklung und Folgeeinsätze | Patient verschlechtert sich während der Anfahrt; Unfall → Stau → Auffahrunfall | M6 |
-| Ortsabhängiges Aufkommen | Seniorenheim nachts, Freibad im Sommer, Disco am Samstag, Autobahn im Berufsverkehr | M3 (einfach), M8 |
-| Ereigniskalender und Weltlage | Glätte, Hitzewelle, Unwetter, Grippewelle, Volksfest, Silvester, Baustellen/Sperrungen, Klinik-Abmeldungen | M7/M8 |
-| Seltene Großereignisse | Busunfall, Zugunglück, Gefahrgut, Großbrand, Evakuierung | M10 |
-| Wiederkehrende Personen und Adressen | Vielanrufer, Stammpatienten, bekannte Problemadressen | M11 |
-| Einsatz-Regie (Director) | Wechsel von Ruhephasen und Spitzen innerhalb realistischer Grenzen | M8 |
-| Langzeitspiel | Endlosbetrieb mit Kalender, Laufbahn, größere Bereiche, Bedarfsplanung, Tages-Seed-Herausforderung | M11 |
-| Community-Inhalte | eigene Regionen, Bausteine, Szenarien | M12 |
+| Mechanik                                                                                | Beispiel                                                                                                   | ab                             |
+| --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| Einsätze aus Bausteinen (Meldebild × Patient × Ort × Umstände × Anrufer × Komplikation) | „Sturz" wird zu: 84-Jährige, 3. OG ohne Aufzug, Hund in der Wohnung, Nachbarin ruft an, nachts, Glätte     | M3 (einfach), M5 (voll)        |
+| Wahre Lage ≠ gemeldete Lage                                                             | „Bewusstlose Person" → vor Ort Reanimation; „Kleinbrand" → Wohnungsbrand mit Menschenleben in Gefahr       | M3 (Datenmodell), M5/M6 (voll) |
+| Lageentwicklung und Folgeeinsätze                                                       | Patient verschlechtert sich während der Anfahrt; Unfall → Stau → Auffahrunfall                             | M6                             |
+| Ortsabhängiges Aufkommen                                                                | Seniorenheim nachts, Freibad im Sommer, Disco am Samstag, Autobahn im Berufsverkehr                        | M3 (einfach), M8               |
+| Ereigniskalender und Weltlage                                                           | Glätte, Hitzewelle, Unwetter, Grippewelle, Volksfest, Silvester, Baustellen/Sperrungen, Klinik-Abmeldungen | M7/M8                          |
+| Seltene Großereignisse                                                                  | Busunfall, Zugunglück, Gefahrgut, Großbrand, Evakuierung                                                   | M10                            |
+| Wiederkehrende Personen und Adressen                                                    | Vielanrufer, Stammpatienten, bekannte Problemadressen                                                      | M11                            |
+| Einsatz-Regie (Director)                                                                | Wechsel von Ruhephasen und Spitzen innerhalb realistischer Grenzen                                         | M8                             |
+| Langzeitspiel                                                                           | Endlosbetrieb mit Kalender, Laufbahn, größere Bereiche, Bedarfsplanung, Tages-Seed-Herausforderung         | M11                            |
+| Community-Inhalte                                                                       | eigene Regionen, Bausteine, Szenarien                                                                      | M12                            |
 
 ## 4. Architektur
 
@@ -201,17 +201,17 @@ Persistenz, Nachrichten).
 
 ### 4.2 Pakete (pnpm-Monorepo)
 
-| Paket | Inhalt | darf abhängen von |
-|---|---|---|
-| `packages/sim` | Simulationskern: Zeit, PRNG, Entitäten, Systeme, Befehle, Ereignisse, Bewertung | `routing`, `content-schema` |
-| `packages/routing` | Straßengraph (Typed Arrays), Dijkstra/A*, One-to-Many, Fahrzeitmodell | – |
-| `packages/content-schema` | Zod-Schemas für alle Inhalte, generierte JSON-Schemas, Typen | – |
-| `packages/content-loader` | YAML laden, validieren, Mods zusammenführen, Fehlerberichte | `content-schema` |
-| `packages/protocol` | Typen für Befehle, Deltas, Ereignisse zwischen Sim-Host und UI | `sim` (nur Typen) |
-| `apps/desktop` | Electron Main + Preload + Sim-Host, SQLite, Logging, Crash, Installer | alle Pakete |
-| `apps/ui` | React-Renderer (Vite), i18n, Theme, Shortcuts | `protocol` |
-| `tools/region-builder` | Generator für fiktive Regionen, später OSM-Import; erzeugt Regionspakete | `routing`, `content-schema` |
-| `content/base` | Basisinhalte (YAML): Fahrzeugtypen, Meldebilder, AAO, Region Brakenfeld | – |
+| Paket                     | Inhalt                                                                          | darf abhängen von           |
+| ------------------------- | ------------------------------------------------------------------------------- | --------------------------- |
+| `packages/sim`            | Simulationskern: Zeit, PRNG, Entitäten, Systeme, Befehle, Ereignisse, Bewertung | `routing`, `content-schema` |
+| `packages/routing`        | Straßengraph (Typed Arrays), Dijkstra/A*, One-to-Many, Fahrzeitmodell           | –                           |
+| `packages/content-schema` | Zod-Schemas für alle Inhalte, generierte JSON-Schemas, Typen                    | –                           |
+| `packages/content-loader` | YAML laden, validieren, Mods zusammenführen, Fehlerberichte                     | `content-schema`            |
+| `packages/protocol`       | Typen für Befehle, Deltas, Ereignisse zwischen Sim-Host und UI                  | `sim` (nur Typen)           |
+| `apps/desktop`            | Electron Main + Preload + Sim-Host, SQLite, Logging, Crash, Installer           | alle Pakete                 |
+| `apps/ui`                 | React-Renderer (Vite), i18n, Theme, Shortcuts                                   | `protocol`                  |
+| `tools/region-builder`    | Generator für fiktive Regionen, später OSM-Import; erzeugt Regionspakete        | `routing`, `content-schema` |
+| `content/base`            | Basisinhalte (YAML): Fahrzeugtypen, Meldebilder, AAO, Region Brakenfeld         | –                           |
 
 Abhängigkeitsrichtung wird per ESLint-Regel (`import/no-restricted-paths` bzw.
 `eslint-plugin-boundaries`) erzwungen.
@@ -300,16 +300,16 @@ Abhängigkeitsrichtung wird per ESLint-Regel (`import/no-restricted-paths` bzw.
 
 ### 4.8 Qualitätssicherung
 
-| Ebene | Werkzeug | Was |
-|---|---|---|
-| Statik | TypeScript strict, ESLint (typed), Prettier | bei jedem Commit (lint-staged) und in CI |
-| Unit | Vitest | alle Pakete |
-| Property-based | fast-check | Sim-Invarianten (s. u.), Routing (Dreiecksungleichung, Symmetrie bei ungerichteten Kanten), Serialisierung (Roundtrip) |
-| Determinismus | Vitest + Golden-Replays | gleicher Seed + Befehle → gleicher State-Hash |
-| Inhalte | Content-Validator CLI | Schemas + Querverweise (AAO verweist auf existierende Fahrzeugtypen …) |
-| E2E | Playwright (`_electron`) | Kernabläufe auf echtem Build |
-| Performance | Vitest bench + E2E-FPS-Messung | Budgets: Tick bei 10x mit 300 Fz/100 Einsätzen < 5 ms, UI ≥ 60 FPS, Start < 5 s |
-| CI | GitHub Actions `windows-latest` | lint, typecheck, test, content-validate, build, e2e, Installer als Artefakt |
+| Ebene          | Werkzeug                                    | Was                                                                                                                    |
+| -------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Statik         | TypeScript strict, ESLint (typed), Prettier | bei jedem Commit (lint-staged) und in CI                                                                               |
+| Unit           | Vitest                                      | alle Pakete                                                                                                            |
+| Property-based | fast-check                                  | Sim-Invarianten (s. u.), Routing (Dreiecksungleichung, Symmetrie bei ungerichteten Kanten), Serialisierung (Roundtrip) |
+| Determinismus  | Vitest + Golden-Replays                     | gleicher Seed + Befehle → gleicher State-Hash                                                                          |
+| Inhalte        | Content-Validator CLI                       | Schemas + Querverweise (AAO verweist auf existierende Fahrzeugtypen …)                                                 |
+| E2E            | Playwright (`_electron`)                    | Kernabläufe auf echtem Build                                                                                           |
+| Performance    | Vitest bench + E2E-FPS-Messung              | Budgets: Tick bei 10x mit 300 Fz/100 Einsätzen < 5 ms, UI ≥ 60 FPS, Start < 5 s                                        |
+| CI             | GitHub Actions `windows-latest`             | lint, typecheck, test, content-validate, build, e2e, Installer als Artefakt                                            |
 
 Sim-Invarianten (Beispiele): Ein Fahrzeug ist höchstens einem Einsatz zugeordnet; nur
 erlaubte FMS-Übergänge; Patienten gehen nicht verloren; Spielzeit monoton; Belegung eines
@@ -327,58 +327,58 @@ Krankenhauses nie negativ; nach Pause ändert sich der Zustand nicht.
 
 ## 5. Tech-Stack – Entscheidung
 
-| Bereich | Wahl | Kurzbegründung | ADR |
-|---|---|---|---|
-| Desktop-Shell | **Electron** (statt Tauri 2) | eine Sprache, Sim als Node-Prozess für viele Fenster, Playwright-E2E nativ, stabile Mehrmonitor-APIs | 0002 |
-| Sprache | TypeScript (aktuelle stabile Version), strict | Vorgabe; ein Typsystem von Inhalten bis UI | 0003 |
-| Monorepo | pnpm workspaces | schnelle, strikte Abhängigkeiten | 0003 |
-| UI | React 19, Vite, Zustand, CSS Modules, Radix | ausgereift, gut testbar | 0011 |
-| Karte | MapLibre GL JS, eigene Vektorkacheln | offline, frei lizenziert (BSD-3) | 0006 |
-| Routing | eigene Implementierung in TS | deterministisch, im Sim-Kern nutzbar, keine native Abhängigkeit | 0007 |
-| Persistenz | SQLite (better-sqlite3) für Saves | robust, atomar, eine Datei | 0008 |
-| Inhalte | YAML + Zod-Schemas → JSON-Schema | lesbar für Modder, Typen aus einer Quelle | 0009 |
-| Tests | Vitest, fast-check, Playwright | Vorgabe | 0010 |
-| Logging | pino + Electron crashReporter | strukturiert, lokal | 0012 |
-| i18n | i18next | Standard im React-Umfeld | 0011 |
-| Installer | electron-builder (NSIS) | per-User-Installation, ohne Admin | 0002 |
+| Bereich       | Wahl                                          | Kurzbegründung                                                                                       | ADR  |
+| ------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---- |
+| Desktop-Shell | **Electron** (statt Tauri 2)                  | eine Sprache, Sim als Node-Prozess für viele Fenster, Playwright-E2E nativ, stabile Mehrmonitor-APIs | 0002 |
+| Sprache       | TypeScript (aktuelle stabile Version), strict | Vorgabe; ein Typsystem von Inhalten bis UI                                                           | 0003 |
+| Monorepo      | pnpm workspaces                               | schnelle, strikte Abhängigkeiten                                                                     | 0003 |
+| UI            | React 19, Vite, Zustand, CSS Modules, Radix   | ausgereift, gut testbar                                                                              | 0011 |
+| Karte         | MapLibre GL JS, eigene Vektorkacheln          | offline, frei lizenziert (BSD-3)                                                                     | 0006 |
+| Routing       | eigene Implementierung in TS                  | deterministisch, im Sim-Kern nutzbar, keine native Abhängigkeit                                      | 0007 |
+| Persistenz    | SQLite (better-sqlite3) für Saves             | robust, atomar, eine Datei                                                                           | 0008 |
+| Inhalte       | YAML + Zod-Schemas → JSON-Schema              | lesbar für Modder, Typen aus einer Quelle                                                            | 0009 |
+| Tests         | Vitest, fast-check, Playwright                | Vorgabe                                                                                              | 0010 |
+| Logging       | pino + Electron crashReporter                 | strukturiert, lokal                                                                                  | 0012 |
+| i18n          | i18next                                       | Standard im React-Umfeld                                                                             | 0011 |
+| Installer     | electron-builder (NSIS)                       | per-User-Installation, ohne Admin                                                                    | 0002 |
 
 ## 6. Meilensteine
 
 Jeder Meilenstein endet lauffähig, getestet, committet, mit CHANGELOG-Eintrag und
 Zusammenfassung an den Product Owner.
 
-| # | Name | Ergebnis | Grobe Größe |
-|---|---|---|---|
-| M0 | Planung | dieses Dokument, ADRs, CLAUDE.md | erledigt mit Freigabe |
-| M1 | Fundament | Monorepo, Tooling, CI auf `windows-latest`, leeres Electron-Fenster mit Dark-Theme, Sim-Host-Prozess mit Tick/Pause/Zeitraffer, PRNG, Logging, Crash-Handler, NSIS-Installer als CI-Artefakt | S |
-| M2 | Welt & Routing | Region-Builder für „Brakenfeld", Routinggraph, Fahrzeitmodell, Offline-Karte mit Straßen/Orten/Wachen/Krankenhäusern, Adresssuche | L |
-| M3 | Vertical Slice – Ablauf | Notruf mit Abfrage, Einsatz, AAO-Vorschlag, Alarmierung, FMS-Zyklus, Anfahrt auf der Karte, Transport, Übergabe, Rückfahrt; Einsatzliste, Fahrzeugliste, Funklog | L |
-| M4 | Vertical Slice – fertig (v0.1.0) | Speichern/Laden/Autosave, Schichtauswertung, Tutorial, Tastatursteuerung, Performance-Test mit 300 Fz/100 Einsätzen (synthetisch), E2E-Tests, Installer manuell geprüft | M |
-| M5 | Notrufannahme & Einsatzgenerator 2.0 | Dialoggenerator, Bausteinsystem für Einsätze, wahre vs. gemeldete Lage, mehrere Leitungen, Warteschlange, Fehl-/Missbrauchs-/Doppelanrufe, 110- und Nachbarübergaben | L |
-| M6 | Feuerwehr & AAO | Fahrzeugtypen Feuerwehr, Brand-/TH-Stichworte, Nachalarmierung, Lagemeldungen, NEF-Rendezvous, KTW/ITW/NAW | L |
-| M7 | RD-Logistik | Bettenkapazität und Abmeldungen, Krankentransport-Termine, Verlegungen, Desinfektion, Defekte, Tanken, Pausen, Schichtwechsel | M |
-| M8 | Welt-Dynamik | feine Tages-/Wochenmuster, Wetter, Feiertage, Silvester, Ereigniskalender, Straßensperrungen, Einsatz-Regie, RTH/ITH | M |
-| M9 | Mehrfenster & Mehrmonitor | frei anordenbare Fenster, Layout-Profile, vollständige Shortcuts | M |
-| M10 | MANV & Großlagen | Sichtung, Bereitstellungsraum, ELW-Führung, Patientenverteilung, SEG, seltene Großereignisse | L |
-| M11 | Langzeitspiel | Endlosbetrieb mit Kalender, Laufbahn, Bereichsübernahme, Bedarfsplanung, wiederkehrende Personen, Tages-Seed-Herausforderung | M |
-| M12 | Editoren & Modding (v1.0.0) | Regionen- und Szenario-Editor, Mod-Ordner, Schema-Doku, Trainingsmodus, Schwierigkeitsgrade, Hilfsfrist-Presets aller Länder mit Quellen | L |
-| M13+ | Echte Regionen | OSM-Pipeline, Import öffentlicher Wachen-/Krankenhausdaten mit Lizenzprüfung | – |
+| #    | Name                                 | Ergebnis                                                                                                                                                                                     | Grobe Größe           |
+| ---- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| M0   | Planung                              | dieses Dokument, ADRs, CLAUDE.md                                                                                                                                                             | erledigt mit Freigabe |
+| M1   | Fundament                            | Monorepo, Tooling, CI auf `windows-latest`, leeres Electron-Fenster mit Dark-Theme, Sim-Host-Prozess mit Tick/Pause/Zeitraffer, PRNG, Logging, Crash-Handler, NSIS-Installer als CI-Artefakt | S                     |
+| M2   | Welt & Routing                       | Region-Builder für „Brakenfeld", Routinggraph, Fahrzeitmodell, Offline-Karte mit Straßen/Orten/Wachen/Krankenhäusern, Adresssuche                                                            | L                     |
+| M3   | Vertical Slice – Ablauf              | Notruf mit Abfrage, Einsatz, AAO-Vorschlag, Alarmierung, FMS-Zyklus, Anfahrt auf der Karte, Transport, Übergabe, Rückfahrt; Einsatzliste, Fahrzeugliste, Funklog                             | L                     |
+| M4   | Vertical Slice – fertig (v0.1.0)     | Speichern/Laden/Autosave, Schichtauswertung, Tutorial, Tastatursteuerung, Performance-Test mit 300 Fz/100 Einsätzen (synthetisch), E2E-Tests, Installer manuell geprüft                      | M                     |
+| M5   | Notrufannahme & Einsatzgenerator 2.0 | Dialoggenerator, Bausteinsystem für Einsätze, wahre vs. gemeldete Lage, mehrere Leitungen, Warteschlange, Fehl-/Missbrauchs-/Doppelanrufe, 110- und Nachbarübergaben                         | L                     |
+| M6   | Feuerwehr & AAO                      | Fahrzeugtypen Feuerwehr, Brand-/TH-Stichworte, Nachalarmierung, Lagemeldungen, NEF-Rendezvous, KTW/ITW/NAW                                                                                   | L                     |
+| M7   | RD-Logistik                          | Bettenkapazität und Abmeldungen, Krankentransport-Termine, Verlegungen, Desinfektion, Defekte, Tanken, Pausen, Schichtwechsel                                                                | M                     |
+| M8   | Welt-Dynamik                         | feine Tages-/Wochenmuster, Wetter, Feiertage, Silvester, Ereigniskalender, Straßensperrungen, Einsatz-Regie, RTH/ITH                                                                         | M                     |
+| M9   | Mehrfenster & Mehrmonitor            | frei anordenbare Fenster, Layout-Profile, vollständige Shortcuts                                                                                                                             | M                     |
+| M10  | MANV & Großlagen                     | Sichtung, Bereitstellungsraum, ELW-Führung, Patientenverteilung, SEG, seltene Großereignisse                                                                                                 | L                     |
+| M11  | Langzeitspiel                        | Endlosbetrieb mit Kalender, Laufbahn, Bereichsübernahme, Bedarfsplanung, wiederkehrende Personen, Tages-Seed-Herausforderung                                                                 | M                     |
+| M12  | Editoren & Modding (v1.0.0)          | Regionen- und Szenario-Editor, Mod-Ordner, Schema-Doku, Trainingsmodus, Schwierigkeitsgrade, Hilfsfrist-Presets aller Länder mit Quellen                                                     | L                     |
+| M13+ | Echte Regionen                       | OSM-Pipeline, Import öffentlicher Wachen-/Krankenhausdaten mit Lizenzprüfung                                                                                                                 | –                     |
 
 Reihenfolge nach M4 ist verhandelbar; M9 kann vorgezogen werden, falls Mehrmonitor früh
 wichtig ist.
 
 ## 7. Risiken
 
-| Risiko | Auswirkung | Gegenmaßnahme |
-|---|---|---|
-| Glaubwürdige fiktive Karte ist aufwendig | Slice wirkt künstlich | Generator mit handgesetzten Achsen/Orten statt reinem Zufall; früh visuell prüfen (M2) |
-| Fachlicher Realismus (AAO, Medizin, Hilfsfristen) | Fehler fallen Kennern sofort auf | Annahmen in `docs/domain/` mit Quellen dokumentieren, Werte datengetrieben, Review durch Fachleute aus dem Spielerkreis |
-| Determinismus bricht unbemerkt | Replays/Tests unbrauchbar | Lint-Verbote, Golden-Replay-Tests in CI |
-| Performance der Karte bei vielen Objekten | Ruckeln | GeoJSON-Updates gedrosselt, Interpolation im Renderer, Benchmark ab M4 |
-| Native Module (better-sqlite3) und Electron-Versionen | Build-Probleme | Prebuilds, Rebuild in CI, Fallback `node:sqlite` prüfen |
-| Firmenrechner blockiert Programme in AppData | Werkzeuge starten nicht | Werkzeuge und Caches unter `C:\dev`, CI als maßgebliche Build-Umgebung (Kapitel 9) |
-| Vielfalt wirkt nach einiger Zeit doch repetitiv | Spieler verlieren Interesse | Bausteinsystem, wahre vs. gemeldete Lage, Long-Tail-Ereignisse, Statistik über Wiederholungen (ADR-0014) |
-| Unsigned Installer | SmartScreen-Warnung | dokumentieren; Code-Signing-Zertifikat vor öffentlicher Verteilung |
+| Risiko                                                | Auswirkung                       | Gegenmaßnahme                                                                                                           |
+| ----------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Glaubwürdige fiktive Karte ist aufwendig              | Slice wirkt künstlich            | Generator mit handgesetzten Achsen/Orten statt reinem Zufall; früh visuell prüfen (M2)                                  |
+| Fachlicher Realismus (AAO, Medizin, Hilfsfristen)     | Fehler fallen Kennern sofort auf | Annahmen in `docs/domain/` mit Quellen dokumentieren, Werte datengetrieben, Review durch Fachleute aus dem Spielerkreis |
+| Determinismus bricht unbemerkt                        | Replays/Tests unbrauchbar        | Lint-Verbote, Golden-Replay-Tests in CI                                                                                 |
+| Performance der Karte bei vielen Objekten             | Ruckeln                          | GeoJSON-Updates gedrosselt, Interpolation im Renderer, Benchmark ab M4                                                  |
+| Native Module (better-sqlite3) und Electron-Versionen | Build-Probleme                   | Prebuilds, Rebuild in CI, Fallback `node:sqlite` prüfen                                                                 |
+| Firmenrechner blockiert Programme in AppData          | Werkzeuge starten nicht          | Werkzeuge und Caches unter `C:\dev`, CI als maßgebliche Build-Umgebung (Kapitel 9)                                      |
+| Vielfalt wirkt nach einiger Zeit doch repetitiv       | Spieler verlieren Interesse      | Bausteinsystem, wahre vs. gemeldete Lage, Long-Tail-Ereignisse, Statistik über Wiederholungen (ADR-0014)                |
+| Unsigned Installer                                    | SmartScreen-Warnung              | dokumentieren; Code-Signing-Zertifikat vor öffentlicher Verteilung                                                      |
 
 ## 8. Entscheidungen des Product Owners (2026-11-24)
 
@@ -401,3 +401,6 @@ Der Entwicklungsrechner ist ein verwalteter Firmenrechner: Programme aus `%APPDA
 - Werkzeug-Caches, die ausführbare Dateien enthalten (z. B. electron-builder/NSIS), werden
   per Umgebungsvariable nach `C:\dev\.cache` umgeleitet.
 - Die CI auf GitHub Actions ist davon unabhängig und die maßgebliche Build-Umgebung.
+- **Der Windows-Installer wird nur in der CI gebaut.** Lokal bricht electron-builder mit
+  `spawn EPERM` ab, weil die Richtlinie den frisch erzeugten, unsignierten Installer-Stub nicht
+  starten lässt. Lint, Tests, Build und E2E laufen lokal normal.

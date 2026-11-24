@@ -1,0 +1,28 @@
+appId: de.leitstelle112.app
+productName: Leitstelle 112
+copyright: Copyright © 2026 Leitstelle 112 – Mitwirkende (GPL-3.0-or-later)
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**/*
+  - '!dist/**/*.map'
+  - package.json
+asar: true
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  artifactName: Leitstelle112-Setup-${version}.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Leitstelle 112
+  uninstallDisplayName: Leitstelle 112
+  license: ../../LICENSE
+  deleteAppDataOnUninstall: false
+publish: null

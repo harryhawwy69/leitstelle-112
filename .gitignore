@@ -12,3 +12,5 @@ test-results/
 .env.*
 .DS_Store
 Thumbs.db
+builder-debug.yml
+.cache/

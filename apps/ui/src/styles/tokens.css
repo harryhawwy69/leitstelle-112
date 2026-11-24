@@ -1,0 +1,86 @@
+/*
+ * Design-Tokens (ADR-0011). Alle Farben erfüllen auf ihrem vorgesehenen Hintergrund
+ * mindestens WCAG AA. Schriftgrößen in rem, damit die globale Skalierung greift.
+ * Schriften: Windows-Systemschriften, kein Download nötig.
+ */
+:root {
+  color-scheme: dark;
+
+  --font-ui: 'Segoe UI Variable Text', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Cascadia Mono', 'Consolas', ui-monospace, monospace;
+  --font-scale: 1;
+  font-size: calc(14px * var(--font-scale));
+
+  --bg-app: #0b0f14;
+  --bg-panel: #111821;
+  --bg-panel-header: #16202b;
+  --bg-row-hover: #1b2733;
+  --bg-input: #0e141b;
+  --border: #233243;
+  --border-strong: #31465c;
+
+  --text: #e6edf3;
+  --text-muted: #9fb0c0;
+  --text-faint: #6f8294;
+
+  --accent: #4ea1ff;
+  --accent-strong: #2f7fe0;
+  --ok: #3fcf6e;
+  --warn: #f5b335;
+  --alarm: #ff5a52;
+
+  /* FMS-Status – nie die einzige Kodierung, immer mit Ziffer (Barrierearmut). */
+  --fms-0: #ff5a52;
+  --fms-1: #3fcf6e;
+  --fms-2: #1f9d4f;
+  --fms-3: #f5d33b;
+  --fms-4: #ff8a3d;
+  --fms-5: #4ea1ff;
+  --fms-6: #7d8b99;
+  --fms-7: #b77dff;
+  --fms-8: #ff6fb5;
+  --fms-9: #2fd0e0;
+
+  --radius: 4px;
+  --gap: 6px;
+  --focus-ring: 0 0 0 2px var(--bg-app), 0 0 0 4px var(--accent);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg-app);
+  color: var(--text);
+  font-family: var(--font-ui);
+  line-height: 1.35;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

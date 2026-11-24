@@ -50,7 +50,7 @@ docs/               Plan, ADRs, Fachdoku (docs/domain/), Lizenzen
 - **Code-Bezeichner auf Englisch**, Fachbegriffe ohne gängige Übersetzung bleiben deutsch
   und werden nicht verballhornt: `Einsatz` → `incident`, aber `aao`, `fms`, `hilfsfrist`,
   `nef`, `rtw` bleiben. Glossar: `docs/domain/glossar.md` (ab M1).
-- Kommentare und Dokumentation auf Deutsch; Kommentare erklären das *Warum*.
+- Kommentare und Dokumentation auf Deutsch; Kommentare erklären das _Warum_.
 - IDs in Inhalten mit Namensraum: `base:rtw`.
 - Formatierung: Prettier (keine Diskussionen), Linting: ESLint mit Typinformationen.
 - Fehler im Sim-Kern: Befehle werden validiert und mit Ergebnis-Ereignis abgelehnt, nicht

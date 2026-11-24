@@ -6,7 +6,7 @@ Schön, dass du helfen willst! Beiträge sind willkommen – Code, Inhalte, Test
 ## Wege, beizutragen
 
 - **Fehler melden:** Issue mit der Vorlage „Fehlerbericht". Hänge, wenn möglich, das
-  Diagnosepaket an (Menü *Hilfe → Diagnosepaket erstellen*) – es enthält Seed und Eingaben,
+  Diagnosepaket an (Menü _Hilfe → Diagnosepaket erstellen_) – es enthält Seed und Eingaben,
   damit wir den Fehler exakt nachstellen können.
 - **Realismus-Feedback:** Vorlage „Fachliches Feedback". Bitte mit Quelle oder Erfahrungswert.
 - **Ideen:** Vorlage „Feature-Wunsch".

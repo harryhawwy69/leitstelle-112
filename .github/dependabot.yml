@@ -1,0 +1,36 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    labels: ['typ: chore', 'bereich: ci']
+    commit-message:
+      prefix: chore(ci)
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    labels: ['typ: chore', 'abhängigkeiten']
+    commit-message:
+      prefix: chore(deps)
+    groups:
+      dev-tooling:
+        patterns:
+          [
+            'eslint*',
+            '@eslint/*',
+            'typescript-eslint',
+            'prettier',
+            'vitest',
+            '@vitest/*',
+            'fast-check',
+            '@playwright/test',
+          ]
+      react:
+        patterns: ['react', 'react-dom', '@types/react', '@types/react-dom']
+    ignore:
+      # TypeScript 7 (nativ) wird erst übernommen, wenn typescript-eslint es unterstützt.
+      - dependency-name: typescript
+        versions: ['>=7']
