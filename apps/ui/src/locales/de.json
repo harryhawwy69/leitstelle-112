@@ -1,0 +1,76 @@
+{
+  "app": {
+    "title": "Leitstelle 112",
+    "center": "ILS Brakenfeld",
+    "connecting": "Verbinde mit Simulation …",
+    "connected": "Simulation verbunden",
+    "disconnected": "Simulation getrennt – wird neu gestartet …"
+  },
+  "clock": {
+    "pause": "Pause",
+    "resume": "Weiter",
+    "paused": "PAUSE",
+    "speed": "Zeitraffer {{speed}}×",
+    "weekday": {
+      "1": "Mo",
+      "2": "Di",
+      "3": "Mi",
+      "4": "Do",
+      "5": "Fr",
+      "6": "Sa",
+      "7": "So"
+    }
+  },
+  "panel": {
+    "calls": "Notrufe",
+    "map": "Lagekarte",
+    "vehicles": "Fahrzeugstatus",
+    "log": "Ereignisprotokoll"
+  },
+  "calls": {
+    "empty": "Keine wartenden Notrufe",
+    "line": "Leitung {{n}}",
+    "waiting": "wartet {{duration}}",
+    "accept": "Annehmen",
+    "acceptHint": "F2"
+  },
+  "map": {
+    "placeholder": "Die Offline-Lagekarte des Landkreises Brakenfeld folgt in Meilenstein 2."
+  },
+  "vehicles": {
+    "placeholder": "Fahrzeuge folgen in Meilenstein 3. Legende der FMS-Status:"
+  },
+  "fms": {
+    "0": "Priorisierter Sprechwunsch",
+    "1": "Einsatzbereit über Funk",
+    "2": "Einsatzbereit auf Wache",
+    "3": "Einsatz übernommen",
+    "4": "Am Einsatzort",
+    "5": "Sprechwunsch",
+    "6": "Nicht einsatzbereit",
+    "7": "Patient aufgenommen",
+    "8": "Am Transportziel",
+    "9": "Fremdanmeldung"
+  },
+  "events": {
+    "call/incoming": "Notruf {{callId}} geht ein",
+    "call/accepted": "Notruf {{callId}} angenommen nach {{waited}}",
+    "call/abandoned": "Anrufer {{callId}} hat aufgelegt",
+    "command/rejected": "Befehl abgelehnt: {{reason}}",
+    "reason": {
+      "unknownCall": "Notruf nicht mehr vorhanden"
+    }
+  },
+  "stats": {
+    "received": "Eingegangen",
+    "accepted": "Angenommen",
+    "abandoned": "Aufgelegt",
+    "avgWait": "Ø Annahmezeit"
+  },
+  "shortcuts": {
+    "title": "Tastatur",
+    "pause": "Pause",
+    "speed": "Zeitraffer",
+    "accept": "Ältesten Notruf annehmen"
+  }
+}
