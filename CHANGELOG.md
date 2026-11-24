@@ -38,5 +38,5 @@ eigentlichen Sinn – das kommt ab M2/M3.
 - Nach einem Absturz startet die Simulation neu beim Schichtbeginn; Autosave folgt in M4.
 - Der Installer wird nur in der CI gebaut (Richtlinie des Entwicklungsrechners, PLAN Kapitel 9).
 
-[Unreleased]: https://github.com/__OWNER__/leitstelle-112/compare/v0.0.1...HEAD
-[0.0.1]: https://github.com/__OWNER__/leitstelle-112/releases/tag/v0.0.1
+[Unreleased]: https://github.com/samuelklsn/leitstelle-112/compare/v0.0.1...HEAD
+[0.0.1]: https://github.com/samuelklsn/leitstelle-112/releases/tag/v0.0.1

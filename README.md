@@ -5,13 +5,13 @@
 **Realistischer Leitstellensimulator für Rettungsdienst, Feuerwehr und Katastrophenschutz –
 offline, für Windows.**
 
-[![CI](https://github.com/__OWNER__/leitstelle-112/actions/workflows/ci.yml/badge.svg)](https://github.com/__OWNER__/leitstelle-112/actions/workflows/ci.yml)
+[![CI](https://github.com/samuelklsn/leitstelle-112/actions/workflows/ci.yml/badge.svg)](https://github.com/samuelklsn/leitstelle-112/actions/workflows/ci.yml)
 [![Lizenz: GPL-3.0](https://img.shields.io/badge/Code-GPL--3.0-blue.svg)](LICENSE)
 [![Inhalte: CC BY-SA 4.0](https://img.shields.io/badge/Inhalte-CC%20BY--SA%204.0-lightgrey.svg)](content/LICENSE.md)
 ![Plattform](https://img.shields.io/badge/Plattform-Windows%2010%2F11-0078D6)
 ![Status](https://img.shields.io/badge/Status-in%20Entwicklung-orange)
 
-[Plan](docs/PLAN.md) · [Roadmap](https://github.com/__OWNER__/leitstelle-112/milestones) ·
+[Plan](docs/PLAN.md) · [Roadmap](https://github.com/samuelklsn/leitstelle-112/milestones) ·
 [Architektur](docs/adr/README.md) · [Mitmachen](CONTRIBUTING.md) · [Changelog](CHANGELOG.md)
 
 </div>
@@ -44,7 +44,7 @@ wählen und gleichzeitig den Wohnungsbrand annehmen, der auf Leitung 2 wartet.
 
 🚧 **Frühe Entwicklung.** Der erste spielbare Stand (Vertical Slice, v0.1) umfasst den fiktiven
 Landkreis Brakenfeld mit drei Rettungswachen, einem Notarztstandort und zwei Krankenhäusern.
-Fortschritt: [Meilensteine](https://github.com/__OWNER__/leitstelle-112/milestones).
+Fortschritt: [Meilensteine](https://github.com/samuelklsn/leitstelle-112/milestones).
 
 | Meilenstein                | Inhalt                                                                                                        |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------- |
