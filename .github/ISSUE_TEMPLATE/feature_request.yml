@@ -1,6 +1,6 @@
 name: 💡 Feature-Wunsch
 description: Eine Idee für eine neue Funktion oder Verbesserung.
-labels: ["typ: feature", "status: triage"]
+labels: ['typ: feature', 'status: triage']
 body:
   - type: textarea
     id: problem
@@ -24,6 +24,17 @@ body:
     id: bereich
     attributes:
       label: Bereich
-      options: ["Notrufannahme", "Disposition", "Rettungsdienst", "Feuerwehr", "Katastrophenschutz", "Karte/Routing", "Oberfläche", "Inhalte/Modding", "Sonstiges"]
+      options:
+        [
+          'Notrufannahme',
+          'Disposition',
+          'Rettungsdienst',
+          'Feuerwehr',
+          'Katastrophenschutz',
+          'Karte/Routing',
+          'Oberfläche',
+          'Inhalte/Modding',
+          'Sonstiges',
+        ]
     validations:
       required: true

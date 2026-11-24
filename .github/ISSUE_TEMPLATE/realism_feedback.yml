@@ -1,6 +1,6 @@
 name: 🩺 Fachliches Feedback
 description: Etwas ist fachlich unrealistisch (Abläufe, Zeiten, Fahrzeuge, Medizin, Taktik).
-labels: ["typ: realismus", "status: triage"]
+labels: ['typ: realismus', 'status: triage']
 body:
   - type: markdown
     attributes:
@@ -30,4 +30,10 @@ body:
     id: region
     attributes:
       label: Gilt das bundesweit?
-      options: ["bundesweit", "nur in bestimmten Bundesländern", "nur regional / je Leitstelle", "weiß nicht"]
+      options:
+        [
+          'bundesweit',
+          'nur in bestimmten Bundesländern',
+          'nur regional / je Leitstelle',
+          'weiß nicht',
+        ]

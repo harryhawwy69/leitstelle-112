@@ -1,6 +1,6 @@
 name: 🐞 Fehlerbericht
 description: Etwas funktioniert nicht wie erwartet.
-labels: ["typ: bug", "status: triage"]
+labels: ['typ: bug', 'status: triage']
 body:
   - type: markdown
     attributes:
@@ -34,14 +34,14 @@ body:
     id: version
     attributes:
       label: Version
-      placeholder: "0.1.0"
+      placeholder: '0.1.0'
     validations:
       required: true
   - type: dropdown
     id: os
     attributes:
       label: Betriebssystem
-      options: ["Windows 11", "Windows 10", "Andere"]
+      options: ['Windows 11', 'Windows 10', 'Andere']
     validations:
       required: true
   - type: textarea
