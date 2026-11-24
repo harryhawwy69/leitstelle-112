@@ -76,7 +76,7 @@ export type SimEvent =
     };
 
 export interface LoggedCommand {
-  /** Tick, zu dessen Beginn der Befehl angewendet wurde. */
+  /** Tick, nach dem der Befehl angewendet wurde (Spielzeit dieses Ticks). */
   readonly tick: number;
   readonly command: SimCommand;
 }

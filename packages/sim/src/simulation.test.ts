@@ -77,6 +77,51 @@ describe('Simulation – Determinismus', () => {
     );
   });
 
+  it('Replay stimmt auch bei sofort angewendeten Befehlen (flush, z. B. in der Pause)', () => {
+    fc.assert(
+      fc.property(
+        seedArb,
+        fc.array(
+          fc.constantFrom<'step' | 'accept' | 'bogus'>('step', 'step', 'step', 'accept', 'bogus'),
+          {
+            minLength: 50,
+            maxLength: 400,
+          },
+        ),
+        (seed, actions) => {
+          const sim = Simulation.create(busyConfig(seed));
+          for (const action of actions) {
+            if (action === 'step') {
+              sim.step();
+              continue;
+            }
+            const oldest = sim.view().waitingCalls[0];
+            sim.submit({
+              type: 'call/accept',
+              callId: action === 'accept' && oldest ? oldest.id : '?',
+            });
+            sim.flush();
+          }
+          const replayed = replay(busyConfig(seed), sim.commandLog(), sim.tick);
+          expect(replayed.hash()).toBe(sim.hash());
+        },
+      ),
+      { numRuns: 30 },
+    );
+  });
+
+  it('flush wendet Befehle an, ohne Spielzeit zu verbrauchen', () => {
+    const sim = Simulation.create(busyConfig(3));
+    while (sim.view().waitingCalls.length === 0) sim.step();
+    const { time, tick } = sim;
+    const id = sim.view().waitingCalls[0]!.id;
+    sim.submit({ type: 'call/accept', callId: id });
+    const events = sim.flush();
+    expect(events).toEqual([{ type: 'call/accepted', at: time, callId: id, waitedMs: 0 }]);
+    expect(sim.time).toBe(time);
+    expect(sim.tick).toBe(tick);
+  });
+
   it('Golden-Replay: fester Seed ergibt festen Hash', () => {
     // Nur bewusst aktualisieren: `test(sim): update golden replays – <Grund>` (CLAUDE.md).
     const sim = Simulation.create(busyConfig(112));

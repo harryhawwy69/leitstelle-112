@@ -64,9 +64,14 @@ function formatCallId(n: number): string {
  * Der Simulationskern. Rein deterministisch: Der Verlauf hängt nur von Konfiguration,
  * Seed und der Folge der Befehle (mit Tick-Nummer) ab.
  *
+ * Befehle werden zur *aktuellen* Spielzeit angewendet – über {@link Simulation.flush} sofort
+ * (auch in der Pause: Disponenten arbeiten weiter, während die Zeit steht) oder spätestens zu
+ * Beginn des nächsten {@link Simulation.step}. Protokolliert wird der Tick, nach dem der Befehl
+ * wirkte; das genügt für exakte Replays.
+ *
  * Ablauf eines Ticks ({@link Simulation.step}):
- * 1. Spielzeit um {@link TICK_MS} weiterstellen.
- * 2. Vorgemerkte Befehle in Eingangsreihenfolge anwenden.
+ * 1. Noch vorgemerkte Befehle in Eingangsreihenfolge anwenden.
+ * 2. Spielzeit um {@link TICK_MS} weiterstellen.
  * 3. Fällige geplante Ereignisse abarbeiten (Zeitpunkt, dann Sequenznummer).
  * 4. Systeme ausführen (M1: Notrufgenerator).
  */
@@ -133,7 +138,7 @@ export class Simulation {
     return this.state.tick;
   }
 
-  /** Merkt einen Befehl für den nächsten Tick vor. */
+  /** Merkt einen Befehl vor; er wirkt beim nächsten {@link flush} oder {@link step}. */
   submit(command: SimCommand): void {
     this.pending.push(command);
   }
@@ -143,19 +148,21 @@ export class Simulation {
     return this.log;
   }
 
+  /** Wendet alle vorgemerkten Befehle sofort zur aktuellen Spielzeit an, ohne Zeit zu verbrauchen. */
+  flush(): SimEvent[] {
+    const events: SimEvent[] = [];
+    this.applyPending(events);
+    return events;
+  }
+
   /** Führt genau einen Tick aus und liefert die dabei entstandenen Ereignisse. */
   step(): SimEvent[] {
     const events: SimEvent[] = [];
+    this.applyPending(events);
+
     const tick = this.state.tick + 1;
     const time = this.state.time + TICK_MS;
     this.state = { ...this.state, tick, time };
-
-    const commands = this.pending;
-    this.pending = [];
-    for (const command of commands) {
-      this.log.push({ tick, command });
-      this.apply(command, events);
-    }
 
     for (let due = this.queue.popDue(time); due; due = this.queue.popDue(time)) {
       this.handleScheduled(due.payload, events);
@@ -228,6 +235,15 @@ export class Simulation {
       this.abandonCall(payload.callId, events);
     },
   };
+
+  private applyPending(events: SimEvent[]): void {
+    const commands = this.pending;
+    this.pending = [];
+    for (const command of commands) {
+      this.log.push({ tick: this.state.tick, command });
+      this.apply(command, events);
+    }
+  }
 
   private apply(command: SimCommand, events: SimEvent[]): void {
     const handler = this.commandHandlers[command.type];
@@ -317,12 +333,14 @@ export function replay(
 ): Simulation {
   const sim = Simulation.create(config);
   let i = 0;
-  for (let t = 1; t <= ticks; t++) {
+  for (let t = 0; t <= ticks; t++) {
+    // Befehle wirkten nach Tick t (zur Spielzeit von Tick t), also vor dem nächsten Schritt.
     while (i < log.length && (log[i] as LoggedCommand).tick === t) {
       sim.submit((log[i] as LoggedCommand).command);
       i++;
     }
-    sim.step();
+    sim.flush();
+    if (t < ticks) sim.step();
   }
   return sim;
 }
