@@ -46,13 +46,13 @@ wählen und gleichzeitig den Wohnungsbrand annehmen, der auf Leitung 2 wartet.
 Landkreis Brakenfeld mit drei Rettungswachen, einem Notarztstandort und zwei Krankenhäusern.
 Fortschritt: [Meilensteine](https://github.com/__OWNER__/leitstelle-112/milestones).
 
-| Meilenstein | Inhalt |
-|---|---|
-| M1 Fundament | Monorepo, CI, Electron-Shell, Simulationskern mit Zeitraffer |
-| M2 Welt & Routing | fiktiver Landkreis, Straßengraph, Offline-Karte |
-| M3 Vertical Slice – Ablauf | Notruf → Disposition → Anfahrt → Transport → Krankenhaus |
-| M4 Vertical Slice – fertig | Speichern, Auswertung, Tutorial, **v0.1.0** |
-| M5 – M12 | Notrufannahme 2.0, Feuerwehr, Logistik, Welt-Dynamik, Mehrmonitor, MANV, Langzeitspiel, Editoren (**v1.0.0**) |
+| Meilenstein                | Inhalt                                                                                                        |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| M1 Fundament               | Monorepo, CI, Electron-Shell, Simulationskern mit Zeitraffer                                                  |
+| M2 Welt & Routing          | fiktiver Landkreis, Straßengraph, Offline-Karte                                                               |
+| M3 Vertical Slice – Ablauf | Notruf → Disposition → Anfahrt → Transport → Krankenhaus                                                      |
+| M4 Vertical Slice – fertig | Speichern, Auswertung, Tutorial, **v0.1.0**                                                                   |
+| M5 – M12                   | Notrufannahme 2.0, Feuerwehr, Logistik, Welt-Dynamik, Mehrmonitor, MANV, Langzeitspiel, Editoren (**v1.0.0**) |
 
 ## Technik
 

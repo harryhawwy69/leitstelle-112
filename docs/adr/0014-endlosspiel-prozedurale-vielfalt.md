@@ -18,7 +18,7 @@ langen Liste fertiger Einsätze. Alles bleibt deterministisch (Seed) und datenge
    Meldebild-Vorlage × Patient(en) (Alter, Vorerkrankungen, Zustand, Verlauf) × Ort
    (Gebäudetyp, Stockwerk, Zugang, Aufzug, Hund, Hofeinfahrt) × Umstände (Uhrzeit, Wetter,
    Verkehr) × Anrufertyp × Komplikationen. Neue Bausteine vervielfachen die Kombinationen.
-2. **Wahre Lage ≠ gemeldete Lage.** Jeder Einsatz hat eine verborgene *wahre Lage*. Der
+2. **Wahre Lage ≠ gemeldete Lage.** Jeder Einsatz hat eine verborgene _wahre Lage_. Der
    Anrufer meldet sie unvollständig, verzerrt oder falsch (Panik, Laie, Sprachbarriere,
    Dritter). Erst die Rückmeldung der Einsatzkräfte klärt sie auf → Nachalarmierung,
    Abbestellung, Umdisposition. Das ist der wichtigste Realismus- und Spannungsmotor.
@@ -37,8 +37,8 @@ langen Liste fertiger Einsätze. Alles bleibt deterministisch (Seed) und datenge
    hundert Stunden noch Überraschungen kommen.
 7. **Wiederkehrende Personen.** Vielanrufer, Stammpatienten, bekannte Adressen – die Region
    „lebt" und hat ein Gedächtnis innerhalb eines Spielstands.
-8. **Einsatz-Regie (Director).** Eine Regie-Komponente moduliert das Aufkommen *innerhalb
-   realistischer Grenzen* (z. B. ± 25 % der Basisrate, Häufung nach Spannungskurve), damit
+8. **Einsatz-Regie (Director).** Eine Regie-Komponente moduliert das Aufkommen _innerhalb
+   realistischer Grenzen_ (z. B. ± 25 % der Basisrate, Häufung nach Spannungskurve), damit
    Ruhephasen und Spitzen abwechseln. Sie erfindet nichts Unrealistisches. Schwierigkeitsgrade
    verschieben nur diese Grenzen und die Hilfestellung, nicht die Physik.
 9. **Langzeitspiel ohne Ende.** Endlosbetrieb mit Kalender und Schichten; Laufbahn
@@ -54,7 +54,7 @@ langen Liste fertiger Einsätze. Alles bleibt deterministisch (Seed) und datenge
 
 ## Konsequenzen
 
-- Das Datenmodell braucht ab dem Vertical Slice die Trennung *gemeldete* vs. *wahre* Lage
+- Das Datenmodell braucht ab dem Vertical Slice die Trennung _gemeldete_ vs. _wahre_ Lage
   (M3, einfache Form), damit spätere Ausbaustufen nicht umbauen müssen.
 - Generator, Regie und Weltlage brauchen Statistik-Tests (Verteilungen, Raten) zusätzlich
   zu Determinismus-Tests.
