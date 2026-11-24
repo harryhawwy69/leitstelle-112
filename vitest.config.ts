@@ -2,6 +2,8 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
+    // Simulationstests spielen ganze Schichten durch.
+    testTimeout: 60_000,
     include: ['packages/*/src/**/*.test.ts', 'apps/*/src/**/*.test.{ts,tsx}'],
     coverage: {
       provider: 'v8',

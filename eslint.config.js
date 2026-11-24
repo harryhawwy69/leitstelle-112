@@ -9,7 +9,7 @@ import tseslint from 'typescript-eslint';
 /** Verbote im deterministischen Simulationskern (ADR-0004, CLAUDE.md Regel 3). */
 const deterministicCore = {
   files: ['packages/sim/src/**/*.ts', 'packages/routing/src/**/*.ts'],
-  ignores: ['**/*.test.ts', '**/*.bench.ts'],
+  ignores: ['**/*.test.ts', '**/*.bench.ts', '**/test-support.ts'],
   rules: {
     'no-restricted-globals': [
       'error',
@@ -38,7 +38,7 @@ const deterministicCore = {
         'log2',
         'log10',
         'pow',
-        'sqrt',
+        // Math.sqrt ist erlaubt: IEEE 754 schreibt korrekt gerundete Ergebnisse vor.
         'cbrt',
         'hypot',
       ].map((property) => ({
